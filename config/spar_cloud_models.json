@@ -1,0 +1,45 @@
+{
+  "description": "Cloud API presets for brief SPAR frontier comparison runs",
+  "notes": [
+    "Model IDs must match your .env provider configuration.",
+    "OpenRouter models: use full slug (meta-llama/llama-3.3-70b-instruct:free).",
+    "Extra providers: use prefix (groq:llama-3.3-70b-versatile, deepseek:deepseek-chat).",
+    "Google native: gemini-2.5-flash (no prefix).",
+    "Set QUORUM_EXECUTION_MODE=sequential to avoid free-tier rate limits."
+  ],
+  "presets": {
+    "openrouter-free-6": {
+      "description": "Six free OpenRouter models — one key, diverse families",
+      "roles": {
+        "Political": "meta-llama/llama-3.3-70b-instruct:free",
+        "Economic": "qwen/qwen3-next-80b-a3b-instruct:free",
+        "Environmental": "deepseek/deepseek-r1:free",
+        "Social": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "DevilsAdvocate": "google/gemini-2.0-flash-exp:free",
+        "Moderator": "meta-llama/llama-3.3-70b-instruct:free"
+      }
+    },
+    "multi-provider-free": {
+      "description": "All working cloud APIs + offline Granite only — OpenRouter frontier Moderator",
+      "roles": {
+        "Political": "github:openai/gpt-4.1",
+        "Economic": "qwencloud:qwen-plus",
+        "Environmental": "ollama:granite3.3:8b",
+        "Social": "gemini-2.5-flash",
+        "DevilsAdvocate": "groq:llama-3.3-70b-versatile",
+        "Moderator": "qwen/qwen3-next-80b-a3b-instruct:free"
+      }
+    },
+    "frontier-paid-mini": {
+      "description": "Small paid frontier stack for quality comparison (requires billing)",
+      "roles": {
+        "Political": "gpt-4o-mini",
+        "Economic": "claude-sonnet-4-20250514",
+        "Environmental": "gemini-2.5-flash",
+        "Social": "grok-3-mini",
+        "DevilsAdvocate": "deepseek:deepseek-chat",
+        "Moderator": "gpt-4o-mini"
+      }
+    }
+  }
+}

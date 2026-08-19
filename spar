@@ -1,0 +1,46 @@
+#!/bin/bash
+# SPAR launcher — starts the terminal UI
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FRONTEND_DIR="$SCRIPT_DIR/frontend"
+
+if [ ! -f "$SCRIPT_DIR/.venv/bin/python" ]; then
+    echo ""
+    echo "[ERROR] SPAR is not installed."
+    echo ""
+    echo "Please run install.sh first:"
+    echo "  ./install.sh"
+    echo ""
+    exit 1
+fi
+
+if [ ! -f "$FRONTEND_DIR/dist/index.js" ]; then
+    echo "Building frontend..."
+    cd "$FRONTEND_DIR" && npm run build
+fi
+
+export QUORUM_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+SIGNAL_FILE="/tmp/spar-ready-$$"
+export QUORUM_SIGNAL_FILE="$SIGNAL_FILE"
+
+cleanup() {
+    rm -f "$SIGNAL_FILE"
+}
+trap cleanup EXIT
+
+(
+    frames=("⠋" "⠙" "⠹" "⠸" "⠼" "⠴" "⠦" "⠧" "⠇" "⠏")
+    i=0
+    while [ ! -f "$SIGNAL_FILE" ]; do
+        printf "\r\033[32m${frames[$i]} Starting SPAR...\033[0m"
+        i=$(( (i + 1) % 10 ))
+        sleep 0.08
+    done
+    printf "\r\033[K"
+) &
+SPINNER_PID=$!
+
+node "$FRONTEND_DIR/dist/index.js"
+
+kill $SPINNER_PID 2>/dev/null
+wait $SPINNER_PID 2>/dev/null
