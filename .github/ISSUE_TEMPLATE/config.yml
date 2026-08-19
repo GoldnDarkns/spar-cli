@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Questions & Discussions
-    url: https://github.com/Detrol/quorum-cli/discussions
-    about: Ask questions and discuss ideas with the community
+  - name: Questions
+    url: https://github.com/GoldnDarkns/spar-cli/issues
+    about: Course / SPAR questions for Group 3
   - name: Documentation
-    url: https://github.com/Detrol/quorum-cli#readme
-    about: Check the README for usage instructions
+    url: https://github.com/GoldnDarkns/spar-cli#readme
+    about: README, reproduce notes, and research prompts

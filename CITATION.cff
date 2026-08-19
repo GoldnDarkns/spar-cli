@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: SPAR
+message: If you use SPAR, please cite this repository.
+type: software
+authors:
+  - family-names: Vij
+    given-names: Madhavan
+  - name: "SP Jain School of Global Management, AI in Finance Group 3"
+abstract: >-
+  SPAR (Scenario Planning via Agentic Reasoning) is a multi-LLM debate system
+  for geopolitical financial stress testing. Five specialist models debate a
+  shock; a separate validator synthesises consensus and dissent; a factor model
+  produces VaR and a hedge overlay.
+keywords:
+  - multi-agent
+  - large language models
+  - debate
+  - financial stress testing
+  - geopolitics
+license: BSL-1.1
+repository-code: "https://github.com/GoldnDarkns/spar-cli"
+date-released: "2026-07-31"
+preferred-citation:
+  type: generic
+  title: "SPAR: Scenario Planning via Agentic Reasoning"
+  authors:
+    - family-names: Vij
+      given-names: Madhavan
+    - name: "SP Jain School of Global Management, AI in Finance Group 3"
+  year: 2026
+  url: "https://github.com/GoldnDarkns/spar-cli"

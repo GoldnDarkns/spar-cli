@@ -1,0 +1,93 @@
+{
+  "baseline_equity_weights": {
+    "SP500": 0.35,
+    "XLE": 0.1,
+    "XLF": 0.15,
+    "XLK": 0.2,
+    "ITA": 0.05,
+    "XLY": 0.15
+  },
+  "recommended_equity_weights": {
+    "SP500": 0.2044,
+    "XLE": 0.0629,
+    "XLF": 0.0817,
+    "XLK": 0.1057,
+    "ITA": 0.0214,
+    "XLY": 0.077
+  },
+  "hedge_weights": {
+    "GLD": 0.1725,
+    "TLT": 0.1775
+  },
+  "cash_weight_pct": 0.097,
+  "trades": [
+    {
+      "asset": "SP500",
+      "action": "REDUCE",
+      "current_weight_pct": 35.0,
+      "target_weight_pct": 32.52,
+      "delta_weight_pct": -2.47,
+      "reason": "Scenario shock -5.0% under sanctions/trade/policy shock consumer behavioural overshoot relief rally dampener channels"
+    },
+    {
+      "asset": "XLF",
+      "action": "REDUCE",
+      "current_weight_pct": 15.0,
+      "target_weight_pct": 13.0,
+      "delta_weight_pct": -1.99,
+      "reason": "Scenario shock -4.0% under sanctions/trade/policy shock consumer behavioural overshoot relief rally dampener channels"
+    },
+    {
+      "asset": "XLK",
+      "action": "REDUCE",
+      "current_weight_pct": 20.0,
+      "target_weight_pct": 16.81,
+      "delta_weight_pct": -3.19,
+      "reason": "Scenario shock -6.4% under sanctions/trade/policy shock consumer behavioural overshoot relief rally dampener channels"
+    },
+    {
+      "asset": "ITA",
+      "action": "REDUCE",
+      "current_weight_pct": 5.0,
+      "target_weight_pct": 3.41,
+      "delta_weight_pct": -1.59,
+      "reason": "Scenario shock -3.2% under sanctions/trade/policy shock consumer behavioural overshoot relief rally dampener channels"
+    },
+    {
+      "asset": "XLY",
+      "action": "REDUCE",
+      "current_weight_pct": 15.0,
+      "target_weight_pct": 12.25,
+      "delta_weight_pct": -2.75,
+      "reason": "Scenario shock -5.5% under sanctions/trade/policy shock consumer behavioural overshoot relief rally dampener channels"
+    },
+    {
+      "asset": "GLD",
+      "action": "ADD_HEDGE",
+      "current_weight_pct": 0.0,
+      "target_weight_pct": 17.25,
+      "delta_weight_pct": 17.25,
+      "reason": "Min-variance hedge sleeve \u2014 Gold (GLD)"
+    },
+    {
+      "asset": "TLT",
+      "action": "ADD_HEDGE",
+      "current_weight_pct": 0.0,
+      "target_weight_pct": 17.75,
+      "delta_weight_pct": 17.75,
+      "reason": "Min-variance hedge sleeve \u2014 Long Treasuries (TLT)"
+    },
+    {
+      "asset": "CASH",
+      "action": "INCREASE",
+      "current_weight_pct": 5.0,
+      "target_weight_pct": 9.69,
+      "delta_weight_pct": 4.69,
+      "reason": "Liquidity buffer for tail scenario / implementation lag"
+    }
+  ],
+  "var_before_pct": 5.811,
+  "var_after_hedge_pct": 4.876,
+  "expected_hedge_pnl_pct": 0.751,
+  "narrative": "Rebalance equity sleeve toward defensives, deploy 35.0% hedge overlay (GLD/TLT min-variance), hold 9.7% cash. Est. VaR improves 5.81% -> 4.88% (parametric 1-day)."
+}

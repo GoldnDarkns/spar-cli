@@ -1,0 +1,30 @@
+{
+  "source": "quorum-ui",
+  "task_preview": "On April 2, 2025, the United States announced broad reciprocal tariffs under the \"Liberation Day\" trade policy package, with sector-specific rates on imports from major trading partners and immediate ",
+  "scenario_id": "liberation_day_2025",
+  "agents": {
+    "Political": "github:openai/gpt-4.1",
+    "Economic": "qwencloud:qwen-plus",
+    "Environmental": "ollama:granite3.3:8b",
+    "Social": "gemini-2.5-flash",
+    "DevilsAdvocate": "ollama:qwen2.5:7b"
+  },
+  "moderator": "ollama:gemma3:4b",
+  "model_map": {
+    "Political": "github:openai/gpt-4.1",
+    "Economic": "qwencloud:qwen-plus",
+    "Environmental": "ollama:granite3.3:8b",
+    "Social": "gemini-2.5-flash",
+    "DevilsAdvocate": "ollama:qwen2.5:7b",
+    "Moderator": "ollama:gemma3:4b"
+  },
+  "unique_models": [
+    "gemini-2.5-flash",
+    "github:openai/gpt-4.1",
+    "ollama:gemma3:4b",
+    "ollama:granite3.3:8b",
+    "ollama:qwen2.5:7b",
+    "qwencloud:qwen-plus"
+  ],
+  "saved_at": "2026-07-08T20:14:16.012345+00:00"
+}

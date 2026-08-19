@@ -1,0 +1,66 @@
+[
+  {
+    "round_number": 2,
+    "dcs_score": 0.6702,
+    "threshold": 0.35,
+    "max_rounds": 5,
+    "action": "explore",
+    "reason": "DCS 0.670 > \u03c4 0.35 \u2014 agents still disagree or produce new information.",
+    "components": {
+      "disagreement": 0.1051,
+      "info_gain": 1.0,
+      "rag_exhaustion": 0.0772,
+      "disagreement_detail": "SP500 spread \u03c3\u22480.4pp across 3 agents; 1 distinct direction(s) (negative).",
+      "info_gain_detail": "426 new token groups vs prior round (69% of current-round vocabulary is novel).",
+      "rag_exhaustion_detail": "47 repeated 3-gram patterns in transcript (2% of unique phrases recur)."
+    }
+  },
+  {
+    "round_number": 3,
+    "dcs_score": 0.6307,
+    "threshold": 0.35,
+    "max_rounds": 5,
+    "action": "explore",
+    "reason": "DCS 0.631 > \u03c4 0.35 \u2014 agents still disagree or produce new information.",
+    "components": {
+      "disagreement": 0.1051,
+      "info_gain": 0.9265,
+      "rag_exhaustion": 0.1236,
+      "disagreement_detail": "SP500 spread \u03c3\u22480.4pp across 3 agents; 1 distinct direction(s) (negative).",
+      "info_gain_detail": "235 new token groups vs prior round (42% of current-round vocabulary is novel).",
+      "rag_exhaustion_detail": "114 repeated 3-gram patterns in transcript (3% of unique phrases recur)."
+    }
+  },
+  {
+    "round_number": 4,
+    "dcs_score": 0.6555,
+    "threshold": 0.35,
+    "max_rounds": 5,
+    "action": "explore",
+    "reason": "DCS 0.656 > \u03c4 0.35 \u2014 agents still disagree or produce new information.",
+    "components": {
+      "disagreement": 0.1051,
+      "info_gain": 1.0,
+      "rag_exhaustion": 0.1218,
+      "disagreement_detail": "SP500 spread \u03c3\u22480.4pp across 3 agents; 1 distinct direction(s) (negative).",
+      "info_gain_detail": "367 new token groups vs prior round (52% of current-round vocabulary is novel).",
+      "rag_exhaustion_detail": "163 repeated 3-gram patterns in transcript (3% of unique phrases recur)."
+    }
+  },
+  {
+    "round_number": 5,
+    "dcs_score": 0.6472,
+    "threshold": 0.35,
+    "max_rounds": 5,
+    "action": "exploit",
+    "reason": "Round 5 reached max cap (5) \u2014 stop debating.",
+    "components": {
+      "disagreement": 0.1051,
+      "info_gain": 0.986,
+      "rag_exhaustion": 0.133,
+      "disagreement_detail": "SP500 spread \u03c3\u22480.4pp across 3 agents; 1 distinct direction(s) (negative).",
+      "info_gain_detail": "281 new token groups vs prior round (45% of current-round vocabulary is novel).",
+      "rag_exhaustion_detail": "225 repeated 3-gram patterns in transcript (3% of unique phrases recur)."
+    }
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "threshold": 60.0,
+  "consensus_score": 92.0,
+  "dissent_score": 68.0,
+  "composite_score": 69.82019198193112,
+  "fsr_alignment_score": 42.711537737624695,
+  "moderator_weight": 0.55,
+  "fsr_weight": 0.45,
+  "action": "proceed",
+  "reason": "Composite plausibility 70 \u2265 \u03c4 60 (moderator 92; FSR alignment 43/100) \u2014 cleared for Layer 3.",
+  "consensus_scenario": {
+    "type": "consensus_scenario",
+    "direction": "negative",
+    "magnitude_pct": {
+      "SP500": -4.7,
+      "XLE": 0.8,
+      "XLF": -3.0,
+      "XLK": -6.5,
+      "ITA": -2.1,
+      "XLY": -5.0
+    },
+    "confidence": 0.85,
+    "primary_transmission_channels": [
+      "Sanctions/Trade/Policy Shock",
+      "Consumer Behavioural Overshoot",
+      "Relief Rally Dampener"
+    ],
+    "plausibility_score": 92,
+    "consensus_summary": "The market is expected to experience a significant negative impact over the five-day period due to heightened tariffs and increased inflationary pressure. This will be driven primarily by a consumer sentiment shock exacerbated by existing economic fragility. While some risk has already been priced in, the speed of fear transmission remains a key concern, leading to an overshoot alongside a moderation of initial estimates."
+  },
+  "minority_dissent": {
+    "type": "minority_dissent",
+    "dissenting_agents": [
+      "SOCIAL",
+      "DEVILS_ADVOCATE"
+    ],
+    "dissent_direction": "negative",
+    "magnitude_pct": {
+      "SP500": -6.2,
+      "XLE": 1.5,
+      "XLF": -4.0,
+      "XLK": -8.0,
+      "ITA": -3.5,
+      "XLY": -7.5
+    },
+    "preserved_dissent_summary": "Despite the considerable debate and recalibration, a substantial minority maintains that the consumer base is exceptionally vulnerable to an amplified shock from tariff-related news, given already depressed sentiment and negative real wage growth. The potential for a significantly deeper XLY drawdown \u2013 closer to -7.5% - remains warranted, driven by the heightened risk of a self-fulfilling panic cycle triggered by social media amplification.  This view is predicated on the belief that Layer 0's underlying data fails to adequately capture the magnitude and speed with which widespread fear can develop in a highly sensitive retail investor environment.",
+    "plausibility_score": 68
+  },
+  "fsr_benchmark": {
+    "alignment_score": 42.71,
+    "scenario_id": "liberation_day_2025",
+    "fsr_editions": [
+      "2024-May",
+      "2025-May"
+    ],
+    "matched_passages": [
+      {
+        "passage_id": "fsr_trade_inflation_2024",
+        "score": 0.4724,
+        "themes": [
+          "trade",
+          "tariffs",
+          "inflation",
+          "consumer"
+        ],
+        "excerpt": "A broad escalation of trade restrictions may pass through to consumer prices, complicate the disinflation process, and prompt a reassessment of the interest-rate path, potentially triggering tighter financial conditions."
+      },
+      {
+        "passage_id": "fsr_trade_uncertainty_2024",
+        "score": 0.4509,
+        "themes": [
+          "trade",
+          "tariffs",
+          "policy_uncertainty",
+          "investment"
+        ],
+        "excerpt": "Increased trade policy uncertainty and the possibility of higher tariffs could weigh on business investment, disrupt supply chains, and raise input costs, with adverse effects on corporate earnings and equity valuations."
+      },
+      {
+        "passage_id": "fsr_equity_correction_2024",
+        "score": 0.2783,
+        "themes": [
+          "equity",
+          "valuation",
+          "risk_off",
+          "volatility"
+        ],
+        "excerpt": "Equity valuations remain sensitive to growth surprises. A negative shock to the growth outlook \u2014 including from trade disruptions \u2014 could precipitate a rapid risk-off move, wider credit spreads, and a flight to safer assets."
+      }
+    ],
+    "scenario_text_preview": "The market is expected to experience a significant negative impact over the five-day period due to heightened tariffs and increased inflationary pressure. This will be driven primarily by a consumer sentiment shock exacerbated by existing economic fragility. While some risk has already been priced in, the speed of fear transmission remains a key concern, leading to an overshoot alongside a moderation of initial estimates. negative Sanctions/Trade/Policy Shock Consumer Behavioural Overshoot Relie",
+    "source": "U.S. Federal Reserve Financial Stability Report (curated benchmark excerpts)",
+    "citation": "https://www.federalreserve.gov/publications/financial-stability-report.htm",
+    "detail": "Top FSR match: fsr_trade_inflation_2024 (47% token/theme overlap). Weighted alignment across 3 passage(s): 42.7/100."
+  }
+}

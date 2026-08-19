@@ -1,7 +1,7 @@
 # SPAR
 
 <p align="center">
-  <img src="docs/demo.gif" alt="SPAR multi-LLM debate in the terminal" width="700">
+  <img src="docs/spar-run.png" alt="SPAR Liberation Day run — DCS, gate, and Layer 3 hedge" width="900">
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 </p>
 
 **SP Jain School of Global Management — AI in Finance — Group 3 — Dr. Guha**  
-Course submission, 2026.
+Course submission, 2026. Authors: [AUTHORS.md](AUTHORS.md). Cite: [CITATION.cff](CITATION.cff).
 
 This codebase started as a fork of [Quorum](https://github.com/Detrol/quorum-cli) (terminal multi-model debate). It has been rebuilt around **SPAR**: channel-first Layer 0 evidence, live sequential debate, DCS explore/exploit, plausibility gating, and Layer 3 portfolio quantification. Upstream credit: [NOTICE.md](NOTICE.md).
 
@@ -218,6 +218,41 @@ The original engine still supports: Standard, Socratic, Advocate, Oxford, Delphi
 
 ---
 
+## Reproduce
+
+See **[docs/REPRODUCE.md](docs/REPRODUCE.md)** for install, offline smoke, cloud brief test, and the files in `research/sample_outputs/`.
+
+Thin extract of the July 2026 Liberation Day hybrid UI run: [`research/sample_outputs/liberation_day_hybrid/`](research/sample_outputs/liberation_day_hybrid/).
+
+---
+
+## Limitations
+
+Be explicit about these in the paper and in Q&amp;A:
+
+- **DCS implementation ≠ paper formula.** Code weights are `0.34 / 0.33 / 0.33`. Disagreement is frozen from Round 1 SP500 JSON; information gain is transcript token novelty; exhaustion is 3-gram repetition — not spaCy JSON diffs or Jaccard on retrieved doc IDs. That is why DCS can stay ~0.65 after forecasts have already clustered.
+- **Magnitude calibration can be 0** on crash events. Liberation Day hybrid consensus was about −5% SPX vs actual 3-day −10.53%. Direction was mostly right; size was not. SPAR is stronger as a **scenario and hedge engine** than as a point-forecast of tail depth.
+- **Validator JSON vs live debate.** Some agents (notably Granite in later rounds) emit prose, not schema, so sector fields and confidence can be missing even when the argument is usable.
+- **Hero image** is a reconstructed terminal view of run `run_20260708_201416`. The original Quorum demo GIF remains at `docs/demo.gif`.
+- **Python package** is still `quorum` internally so the UI and tests keep working.
+
+---
+
+## Cite
+
+```bibtex
+@software{spar2026,
+  title  = {SPAR: Scenario Planning via Agentic Reasoning},
+  author = {Vij, Madhavan and {SP Jain School of Global Management, AI in Finance Group 3}},
+  year   = {2026},
+  url    = {https://github.com/GoldnDarkns/spar-cli}
+}
+```
+
+GitHub also offers **Cite this repository** from [CITATION.cff](CITATION.cff).
+
+---
+
 ## Tests and pilots
 
 ```bash
@@ -236,6 +271,8 @@ uv run python examples/spar_cloud_brief_test.py --list-providers
 | Presentation | [research/spar-presentation.html](research/spar-presentation.html) |
 | Prompt specs | [research/spar-prompts.html](research/spar-prompts.html) |
 | Research proposal | [research/SPAR_Research_Proposal.docx](research/SPAR_Research_Proposal.docx) |
+| Reproduce a run | [docs/REPRODUCE.md](docs/REPRODUCE.md) |
+| SPAR changelog | [CHANGELOG.md](CHANGELOG.md) |
 | Overhaul write-up | [docs/SPAR_Overhaul_And_Updates.pdf](docs/SPAR_Overhaul_And_Updates.pdf) |
 
 ---

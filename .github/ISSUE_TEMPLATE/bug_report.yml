@@ -22,9 +22,9 @@ body:
       label: Steps to reproduce
       description: Steps to reproduce the behavior.
       placeholder: |
-        1. Start quorum with '...'
-        2. Select models '...'
-        3. Ask question '...'
+        1. Start SPAR with spar.bat
+        2. /method spar
+        3. Select models
         4. See error
     validations:
       required: true
