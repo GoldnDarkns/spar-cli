@@ -1,0 +1,55 @@
+// SPAR — five-layer architecture
+// Paste into eraser.io → New architecture diagram
+direction down
+colorMode pastel
+styleMode shadow
+typeface clean
+
+title SPAR Five Layer Architecture [icon: layers, color: indigo]
+
+Shock [icon: alert-triangle, color: orange, label: "Macro / policy shock"]
+
+L0 [icon: search, color: blue] {
+  Profiler [icon: activity, color: blue, label: "0a Shock profiler"]
+  Channels [icon: git-branch, color: blue, label: "0b Channel decomposer"]
+  Evidence [icon: file-text, color: blue, label: "Per-agent evidence packets"]
+}
+
+L1 [icon: users, color: green] {
+  Pol [icon: globe, color: green, label: "Political / Geo"]
+  Eco [icon: trending-up, color: green, label: "Economic / Market"]
+  Env [icon: cpu, color: green, label: "Env / Tech"]
+  Soc [icon: heart, color: green, label: "Social / Behav"]
+  DA [icon: shield, color: red, label: "Devils Advocate"]
+}
+
+DCS [icon: refresh-cw, color: purple, label: "DCS controller\n0.40 DS + 0.40 IG + 0.20 (1-RE)"]
+
+L2 [icon: check-circle, color: orange] {
+  Consensus [icon: file, color: orange, label: "Consensus JSON"]
+  Dissent [icon: message-square, color: orange, label: "Minority dissent"]
+  Gate [icon: filter, color: orange, label: "Plausibility gate PS>=60"]
+}
+
+L3 [icon: bar-chart-2, color: teal] {
+  FF [icon: percent, color: teal, label: "Factor model + GPR"]
+  Risk [icon: alert-circle, color: teal, label: "VaR / ES"]
+  Hedge [icon: lock, color: teal, label: "GLD / TLT + cash"]
+}
+
+Shock > L0: Layer 0 evidence
+L0 > Pol, Eco, Env, Soc, DA: Domain packets
+Pol, Eco, Env, Soc, DA > DCS: After each live round
+DCS > Pol: EXPLORE another round [color: green]
+DCS > L2: EXPLOIT synthesise [color: orange]
+L2 > Gate
+Gate > L3: CLEARED
+Gate > Human [icon: user, color: grey]: PS < 60 review
+
+legend [position: bottom] {
+  [color: blue, label: "Layer 0 evidence"]
+  [color: green, label: "Layer 1 debate"]
+  [color: purple, label: "Continuation control"]
+  [color: orange, label: "Layer 2 validation"]
+  [color: teal, label: "Layer 3 no LLM"]
+}

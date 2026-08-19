@@ -1,0 +1,28 @@
+// SPAR — shock to $10M hedge
+direction right
+colorMode pastel
+styleMode shadow
+typeface clean
+
+In [icon: file-text, color: orange, label: "Liberation Day shock text"]
+Prompts [icon: book, color: grey, label: "research/prompts  master + 5 agents"]
+L0 [icon: database, color: blue, label: "Layer 0 channels + FSR excerpts"]
+Debate [icon: users, color: green, label: "5 models debate R1 then live"]
+Val [icon: check-circle, color: orange, label: "Validator consensus + dissent"]
+Gate [icon: shield, color: orange, label: "PS composite vs 60"]
+Quant [icon: calculator, color: teal, label: "VaR ES factor shocks"]
+Out [icon: briefcase, color: teal, label: "$10M GLD/TLT/cash trades"]
+
+In > Prompts
+Prompts > L0
+L0 > Debate
+Debate > Val
+Val > Gate
+Gate > Quant
+Quant > Out
+
+legend {
+  [color: blue, label: "Evidence"]
+  [color: green, label: "LLMs"]
+  [color: teal, label: "No LLM"]
+}

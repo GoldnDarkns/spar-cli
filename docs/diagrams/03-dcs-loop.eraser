@@ -1,0 +1,32 @@
+// SPAR — DCS explore / exploit
+direction down
+colorMode pastel
+styleMode shadow
+typeface clean
+
+Round [icon: message-circle, color: green, label: "Live debate round N complete"]
+
+Signals [icon: sliders, color: purple] {
+  DS [icon: git-compare, color: purple, label: "DS  forecast disagreement"]
+  IG [icon: plus-circle, color: purple, label: "IG  new information"]
+  RE [icon: repeat, color: grey, label: "RE  RAG / repetition exhaustion"]
+}
+
+Score [icon: hash, color: indigo, label: "DCS = 0.40 DS + 0.40 IG + 0.20 (1-RE)"]
+
+Decide [icon: git-fork, color: orange, label: "DCS > 0.35 AND N < 5?"]
+
+Explore [icon: play, color: green, label: "EXPLORE  another live round"]
+Exploit [icon: stop-circle, color: orange, label: "EXPLOIT  send to validator"]
+
+Round > DS, IG, RE
+DS, IG, RE > Score
+Score > Decide
+Decide > Explore: yes
+Decide > Exploit: no or cap
+Explore > Round
+
+legend {
+  [color: green, label: "Keep debating"]
+  [color: orange, label: "Stop and synthesise"]
+}

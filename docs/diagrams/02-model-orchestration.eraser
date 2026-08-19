@@ -1,0 +1,38 @@
+// SPAR — multi-LLM orchestration (Approach B)
+direction down
+colorMode pastel
+styleMode shadow
+typeface clean
+
+UI [icon: terminal, color: grey, label: "SPAR terminal UI  /method spar"]
+IPC [icon: radio, color: grey, label: "JSON-RPC over stdio"]
+Ctrl [icon: settings, color: indigo, label: "Debate controller sequential"]
+
+Agents [icon: users, color: green] {
+  A1 [icon: openai, color: green, label: "Political  GPT-4.1  GitHub"]
+  A2 [icon: box, color: green, label: "Economic  Qwen Plus  DashScope"]
+  A3 [icon: server, color: green, label: "Env/Tech  Granite  Ollama"]
+  A4 [icon: google, color: green, label: "Social  Gemini Flash  Google"]
+  A5 [icon: zap, color: red, label: "DA  Qwen2.5 or Groq 70B"]
+}
+
+Val [icon: check-square, color: orange, label: "Validator  separate session  never debated"]
+
+Python [icon: code, color: teal, label: "Layer 3 Python  no LLM"]
+
+UI > IPC > Ctrl
+Ctrl > A1: Round N speak
+A1 > A2: Reads transcript
+A2 > A3
+A3 > A4
+A4 > A5
+A5 > Ctrl: Round complete
+Ctrl > Val: Exploit / cap
+Val > Python: Consensus + dissent JSON
+
+legend {
+  [connection: >, label: "Sequential speak order"]
+  [color: green, label: "Debating models"]
+  [color: orange, label: "Fresh validator"]
+  [color: teal, label: "Deterministic quant"]
+}

@@ -44,6 +44,42 @@ Single-prompt “what happens to markets?” answers are brittle. SPAR forces **
 
 ---
 
+## How the system connects
+
+Eraser-style maps of layers, model speak-order, the DCS loop, and the path from a shock to a $10M hedge. Source files you can paste into [eraser.io](https://eraser.io) live in [`docs/diagrams/`](docs/diagrams/).
+
+<p align="center">
+  <img src="docs/diagrams/spar-layers.png" alt="SPAR five-layer architecture" width="900">
+</p>
+
+<p align="center"><em>Layers 0→3. DCS either sends agents back into another live round (EXPLORE) or hands the transcript to a validator that never debated (EXPLOIT).</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/spar-orchestration.png" alt="SPAR multi-LLM orchestration" width="900">
+</p>
+
+<p align="center"><em>Approach B: each specialist is a different provider. They speak sequentially and read the growing transcript. The validator is a fresh session.</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/spar-dcs-loop.png" alt="SPAR DCS explore/exploit loop" width="900">
+</p>
+
+<p align="center"><em>After each live round: DCS = 0.40·DS + 0.40·IG + 0.20·(1−RE). Continue if DCS &gt; 0.35 and rounds &lt; 5.</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/spar-end-to-end.png" alt="SPAR shock to hedge pipeline" width="900">
+</p>
+
+<p align="center"><em>End-to-end dependency: prompts and Layer 0 evidence feed the debate; the gate must pass before Layer 3 (no LLM) sizes VaR and hedges.</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/spar-approach-ab.png" alt="Approach A vs Approach B" width="900">
+</p>
+
+<p align="center"><em>Same structure, different diversity: personas on one model (A) vs five providers (B). Same scoring board.</em></p>
+
+---
+
 ## Sample outputs (offline pilot)
 
 Charts from `research/sample_outputs/offline_pilot/`:

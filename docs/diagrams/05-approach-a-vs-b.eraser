@@ -1,0 +1,37 @@
+// SPAR — Approach A vs Approach B
+direction down
+colorMode pastel
+styleMode shadow
+typeface clean
+
+Shared [icon: copy, color: grey, label: "Same master context  same agent prompts  same rounds  same event"]
+
+A [icon: user, color: blue] {
+  A1 [label: "Persona Political"]
+  A2 [label: "Persona Economic"]
+  A3 [label: "Persona Env/Tech"]
+  A4 [label: "Persona Social"]
+  A5 [label: "Persona DA"]
+  ANote [label: "One model family throughout"]
+}
+
+B [icon: users, color: green] {
+  B1 [label: "Provider 1 Political"]
+  B2 [label: "Provider 2 Economic"]
+  B3 [label: "Provider 3 Env/Tech"]
+  B4 [label: "Provider 4 Social"]
+  B5 [label: "Provider 5 DA"]
+  BNote [label: "Model diversity on top of debate structure"]
+}
+
+Score [icon: award, color: orange, label: "Score DA  MC  TCC  CPS  PS  DQS  DCS"]
+
+Shared > A: Approach A
+Shared > B: Approach B
+A > Score
+B > Score
+
+legend {
+  [color: blue, label: "Persona diversity only"]
+  [color: green, label: "Multi-LLM Approach B"]
+}
